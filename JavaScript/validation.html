@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div>
+        <form action="">
+          <br />
+          <label for="fname">Name :</label>
+          <input type="text" id="fname" onkeyup="checkUserInput()" /><br />
+          <p>Enter 6 chars</p>
+          <button type="button" onclick="addUser()" disabled>Add User</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function checkUserInput() {
+        var userInput = document.getElementById("fname").value;
+
+        if (userInput.length >= 6) {
+          document.querySelector("button").removeAttribute("disabled");
+          document.querySelector("p").style.display = "none";
+        } else {
+          document.querySelector("button").setAttribute("disabled", true);
+          document.querySelector("p").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

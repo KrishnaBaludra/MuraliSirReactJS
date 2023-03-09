@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="fname">First Name : </label>
+      <br />
+      <input type="text" id="fname" /><br />
+      <label for="lname">Last Name : </label>
+      <br />
+      <input type="text" id="lname" />
+      <br />
+      <br />
+
+      <label for="gender">Select Gender</label><br /><br />
+      <input type="radio" name="gender" value="Male" />Male <br />
+      <input type="radio" name="gender" value="Female" />Female <br />
+      <br />
+      <label for="subjects">Subjects : </label><br />
+      <input type="checkbox" name="subjects" id="" value="HTML" />HTML <br />
+      <input type="checkbox" name="subjects" id="" value="CSS" />CSS <br />
+      <input
+        type="checkbox"
+        name="subjects"
+        id=""
+        value="JavaScript"
+      />JavaScript <br />
+      <input type="checkbox" name="subjects" id="" value="ReactJS" />ReactJS
+      <br />
+
+      <button type="button" onclick="getUsers()">Submit</button>
+    </form>
+
+    <script>
+      function getGender() {
+        var allRadio = document.getElementsByName("gender");
+        allRadio.forEach((rad) => {
+          if (rad.checked == true) {
+            console.log(rad.value);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
